@@ -7,6 +7,7 @@
         <p class="auth-subtitle mb-5">Input your email and we will send you reset password link.</p>
 
         <form action="{{ route('password.email') }}" method="POST">
+            @csrf
             <div class="form-group position-relative has-icon-left mb-4">
                 <input type="email" class="form-control form-control-xl" placeholder="Email" value="{{ old('email') }}" name="email">
                 <div class="form-control-icon">
